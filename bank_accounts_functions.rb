@@ -45,4 +45,43 @@ def number_of_bank_accounts()
   ACCOUNTS.length
 end
 
+def first_bank_account_holder()
+  ACCOUNTS[0][:holder_name]
+end
+
+
+def print_owner_names()
+  for name in ACCOUNTS
+    puts "#{name[:holder_name]}"
+  end
+end
+
+def total_cash_in_bank
+  total_cash = 0
+
+  for account in ACCOUNTS
+    total_cash = total_cash + account[:amount]
+  end
+  total_cash
+end
+
+def last_bank_account_holder()
+  ACCOUNTS[-1][:holder_name]
+end
+
+def average_cash_in_bank
+  average_cash = 0
+
+  for account in ACCOUNTS
+    average_cash = average_cash + account[:amount]
+  end
+  average_cash/8
+end
+
+def total_cash_in_business
+  if [:type "business"]
+    
+  end
+end
+
 
