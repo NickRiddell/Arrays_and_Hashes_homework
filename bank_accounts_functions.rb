@@ -83,10 +83,44 @@ def total_cash_in_business
 
   for account in ACCOUNTS
     if account.has_value?("business")
-    total_cash = total_cash + account[:amount]
-  end
+      total_cash = total_cash + account[:amount]
+    end
   end
   total_cash
+end
+
+
+def largest_account_holder        
+  max = 0
+  account_holder = ""
+  for account in ACCOUNTS
+    if account[:amount] > max
+      account_holder = account[:holder_name]
+      max = account[:amount]
+    end
+  end
+  return account_holder
+end
+
+
+def largest_personal
+  max = 0
+  account_holder = ""
+  for account in ACCOUNTS
+    if (account[:type] = "personal") && (account[:amount] > max) #This isn't working properly and I don't know why
+      max = account[:amount]
+      account_holder = account[:holder_name]
+    end
+  end
+  return account_holder
+end
+
+
+
+
+
+
+
 
 
 
