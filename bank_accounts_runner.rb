@@ -32,7 +32,7 @@ puts "\n"
 
 ###total cash in business accounts
 cash_business_accounts = total_cash_in_business()
-puts "total in business accounts #{cash_in_business}"
+puts "total in business accounts #{cash_business_accounts} expected 7055"
 puts "\n"
 
 ###holder of largest bank account

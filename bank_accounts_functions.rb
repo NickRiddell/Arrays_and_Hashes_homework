@@ -79,9 +79,14 @@ def average_cash_in_bank
 end
 
 def total_cash_in_business
-  if [:type "business"]
-    
+  total_cash = 0
+
+  for account in ACCOUNTS
+    if account.has_value?("business")
+    total_cash = total_cash + account[:amount]
   end
-end
+  end
+  total_cash
+
 
 
