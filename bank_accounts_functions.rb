@@ -99,7 +99,7 @@ def largest_account_holder
       max = account[:amount]
     end
   end
-  return account_holder
+  account_holder
 end
 
 
@@ -107,12 +107,13 @@ def largest_personal
   max = 0
   account_holder = ""
   for account in ACCOUNTS
-    if (account[:type] = "personal") && (account[:amount] > max) #This isn't working properly and I don't know why
+    if (account[:type] == "personal") && (account[:amount] > max) #This isn't working properly and I don't know why
       max = account[:amount]
+      puts max
       account_holder = account[:holder_name]
     end
   end
-  return account_holder
+  account_holder
 end
 
 
